@@ -1,0 +1,130 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Dump\\CitizenCloud\\CitizenMailer\\Tests\\Tests\\Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\SDALTON\\.nuget\\packages\\",
+        "outputPath": "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SDALTON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\CoC.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://coc-nuget.coc.ca/nuget/Default": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://tfs.coc.ca/ProjectCollection02/_packaging/coc-nuget-feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "AWSSDK.SimpleNotificationService": {
+              "target": "Package",
+              "version": "[3.5.0-beta, )"
+            },
+            "Blacksmith.App": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.60.6, )"
+            },
+            "Microsoft.Identity.Client": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Dump\\CitizenCloud\\CitizenMailer\\Tests\\Tests\\Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Dump\\CitizenCloud\\CitizenMailer\\Tests\\Tests\\Tests.csproj",
+        "projectName": "Tests",
+        "projectPath": "C:\\Dump\\CitizenCloud\\CitizenMailer\\Tests\\Tests\\Tests.csproj",
+        "packagesPath": "C:\\Users\\SDALTON\\.nuget\\packages\\",
+        "outputPath": "C:\\Dump\\CitizenCloud\\CitizenMailer\\Tests\\Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SDALTON\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\CoC.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net462"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://coc-nuget.coc.ca/nuget/Default": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://tfs.coc.ca/ProjectCollection02/_packaging/coc-nuget-feed/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net462": {
+            "projectReferences": {
+              "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Dump\\CitizenCloud\\CitizenMailer\\API\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net462": {
+          "dependencies": {
+            "Moq": {
+              "target": "Package",
+              "version": "[4.10.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

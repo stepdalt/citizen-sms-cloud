@@ -1,0 +1,73 @@
+﻿{
+  "Response": {
+    "Attributes": [
+      {
+        "name": "Gnomes_COMMENTS",
+        "value": null,
+        "isReadOnly": 1,
+        "isGlobal": 1,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_INSTANCE",
+        "value": "dvcorpg",
+        "isReadOnly": 1,
+        "isGlobal": 1,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_SCHEMA",
+        "value": "MAF",
+        "isReadOnly": 1,
+        "isGlobal": 1,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_USERNAME",
+        "value": "maf",
+        "isReadOnly": 1,
+        "isGlobal": 1,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_add",
+        "value": 1,
+        "isReadOnly": 0,
+        "isGlobal": 0,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_delete",
+        "value": 1,
+        "isReadOnly": 0,
+        "isGlobal": 0,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_read",
+        "value": 1,
+        "isReadOnly": 0,
+        "isGlobal": 0,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_update",
+        "value": 1,
+        "isReadOnly": 0,
+        "isGlobal": 0,
+        "isEncrypted": 0
+      },
+      {
+        "name": "Gnomes_PASSWORD",
+        "value": "password",
+        "isReadOnly": 1,
+        "isGlobal": 1,
+        "isEncrypted": 1
+      }
+    ],
+    "resource": "Gnomes",
+    "sub": "uid",
+    "fname": "fname",
+    "lname": "lname"
+  }
+}
