@@ -1,0 +1,139 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+@import 'custom-palettes';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$coc-app-primary: mat-palette($coc-colors);
+$coc-app-accent:  mat-palette($coc-colors, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$coc-app-warn:    mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+// $coc-app-theme: mat-light-theme($coc-app-primary, $coc-app-accent, $coc-app-warn);
+$coc-app-theme: mat-light-theme($coc-app-primary, $coc-app-accent, $coc-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($coc-app-theme);
+
+/**
+ * Customizations specific to this application
+ * wrapped in an coc specific tag for improved
+ * specificity
+ */
+body {
+
+    /**
+     * general font corrections
+     * selector is dependent on all material components
+     * using a class name prefix of 'mat-'
+     * EXCEPT mat-icons
+     */
+    [class*='mat-']:not(.mat-icon) {
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    }
+
+    /**
+     * moved snack bar customizations to
+     * more central area for customizations
+     * this fixes the default appearance for a snackbar
+     */
+    .mat-snack-bar-container {
+        color: black;
+        background: none;
+        box-shadow: none;
+    }
+
+    /**
+     * style fix for dialog used for
+     * loading spinner
+     */
+    .dark-modal .mat-dialog-container {
+        box-shadow: none;
+        background-color: #4b4f55;
+        color: white;
+    }
+    
+    /* modal confirm container */
+    .mat-dialog-container {
+        padding: 0;
+        overflow: visible;
+    }
+
+    /** 
+     * to allow our alert banner to go above all other elements
+     */
+    .cdk-overlay-container {
+        z-index: 99999;
+    }
+
+    /**
+     * display image viewer modal over top
+     */
+    &.imgviewer-modal-open .imgviewer-modal {
+        z-index: 10003;
+    }
+
+    /** Paginator Styles 
+    *   These styles work with the pl-paginator directive to style paging like the pattern library
+    **/
+
+    .pager .mat-paginator-navigation-previous:after {
+        content: ' Prev';
+    }
+
+    .pager .mat-paginator-navigation-next:before {
+        content: ' Next';
+    }
+
+    .pager .inactive {
+        cursor: pointer;
+    }
+
+    .pager .mat-icon-button {
+        background-color: #fff;
+        border: 0.2rem solid #b7b9bb;
+        border-radius: 0.4rem;
+        color: #4b4f55;
+        display: block;
+        line-height: 1.5;
+        padding: 0.5625rem 0.9375rem;
+        position: relative;
+        width: auto;
+        height: auto;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+
+    .pager .mat-icon-button:not([disabled]):hover {
+        background-color: #fff;
+        border-color: #000;
+        color: #000;
+        text-decoration: none;
+        box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    .pager .mat-icon-button:disabled {
+        visibility: hidden;
+    }
+
+    .pager .mat-paginator-range-actions .mat-paginator-range-label {
+        margin: 0.5rem 24px 0 24px;
+        font-size: 1.1rem;
+}
+
+
+    /** End of Paginator Styles */
+}

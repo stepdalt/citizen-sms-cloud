@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+
+/**
+ * styling to allow overall PL template to display as
+ * flex column, where header stays in place, body can
+ * grow to any size, and footer can either stick to the bottom
+ * or append to the end of body regardless of size larger than
+ * screen height
+ */
+body app-root {
+
+	display: flex;
+	flex-direction: column;
+
+	#ui-body {
+		flex-grow: 1;
+	}
+	#ui-footer {
+		flex-grow: 0;
+	}
+}
+
+/**
+* This style is used to show the loading splash screen when this css is loaded
+* This way it avoids a style pop from un-styled index.html to styled by all the global css.
+*/
+#splashscreen {
+	display: block !important;
+}
+
+/**
+ * icon colors for 2 cicons
+ * global definition allows it
+ * to affect all component elements
+ * as well as modals often outside of
+ * a component DOM node
+ */
+[class*="cicon-exclamation"] {
+	color: #dc3545;
+	color: var(--danger);
+}
+
+[class*="cicon-check"] {
+	color: #28a745;
+	color: var(--success);
+
+}

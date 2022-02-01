@@ -1,0 +1,69 @@
+/* CoC Colors
+================================================== */
+$coc-main: 			#c8102e;
+$coc-secondary:	   	#4b4f55;
+$coc-secondary-1D: 	#191919;
+$coc-secondary-2D: 	#333333;
+$coc-secondary-3D: 	#dbdcdd;
+$coc-secondary-4D: 	#f6f6f6;
+$coc-secondary-8D: 	#cccccc;
+
+$coc-secondary-1L: 	#5d6066;
+$coc-secondary-2L: 	#6f7277;
+$coc-secondary-3L: 	#818388;
+$coc-secondary-4L: 	#939599;
+$coc-secondary-5L: 	#a5a7aa;
+$coc-secondary-6L: 	#b7b9bb;
+$coc-secondary-7L: 	#c9cacc;
+$coc-secondary-8L: 	#dbdcdd;
+$coc-secondary-9L: 	#ededee;
+$coc-secondary-10L: #f6f6f6;
+
+// CoC the secondary colour palette
+$coc-secondary-red:			#A6192E;
+$coc-secondary-orange:		#E57200;
+$coc-secondary-yellow:		#FFC600;
+$coc-secondary-green:		#4C8C2B;
+$coc-secondary-blue:		#0085AD;
+$coc-secondary-dark-blue:	#003865;
+$coc-secondary-purple:		#642F6C;
+$coc-secondary-pink:		#AC145A;
+
+// CoC Safety and metallic palette 
+$coc-secondary-green-safety:	#009639;
+$coc-secondary-green-pedestrian:#C4D600;
+$coc-secondary-blue-access:	 	#0057B8;
+
+
+$coc-colors: (
+    50: $coc-secondary-8D,
+    100: $coc-secondary-4D,
+    200: $coc-secondary-3D,
+    300: $coc-secondary-2D,
+    400: $coc-secondary-1D,
+    500: $coc-main,
+    600: darken($coc-main, 5%),
+    700: darken($coc-main, 10%),
+    800: darken($coc-main, 15%),
+    900: darken($coc-main, 20%),
+    A100: $coc-secondary,
+    A200: $coc-secondary-3D,
+    A400: $coc-secondary-2D,
+    A700: $coc-secondary-1D,
+    contrast: (
+        50: $coc-secondary,
+        100: $coc-main,
+        200: $coc-main,
+        300: $coc-main,
+        400: $coc-main,
+        500: $coc-secondary-10L,
+        600: $coc-main,
+        700: $coc-main,
+        800: $coc-main,
+        900: $coc-main,
+        A100: $coc-main,
+        A200: $coc-main,
+        A400: $coc-main,
+        A700: $coc-main,
+    )
+);
