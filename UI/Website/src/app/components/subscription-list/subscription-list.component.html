@@ -1,0 +1,39 @@
+<button *ngIf="subscriptionList && subscriptionList.subscriptions" aria-label="New Subscription" class="cui btn-md utility-btn-solid"
+  (click)="onSubscribe()">
+  <span class="pl-1 d-none d-sm-inline">New Subscription</span>
+</button>
+<button *ngIf="subscriptionList && subscriptionList.subscriptions" aria-label="Publish Message" class="cui btn-md utility-btn-solid" (click)="onPublish()">
+  <span class="pl-1 d-none d-sm-inline">Publish Message</span>
+</button>
+<button *ngIf="subscriptionList && subscriptionList.subscriptions" aria-label="Delete Subscriptions"
+  class="cui btn-md utility-btn-solid" (click)="onDelete()">
+  <span class="cicon-trash-o"></span>
+  <span class="pl-1 d-none d-sm-inline">Delete Selected Subscriptions</span>
+</button>
+<button *ngIf="subscriptionList && subscriptionList.subscriptions" aria-label="SelectAll Subscriptions"
+  class="cui btn-md utility-btn-solid" (click)="onSelectAll()">
+  <span class="pl-1 d-none d-sm-inline">Select All</span>
+</button>
+<button *ngIf="subscriptionList && subscriptionList.subscriptions" aria-label="DeSelectAll Subscriptions"
+  class="cui btn-md utility-btn-solid" (click)="onDeselectAll()">
+  <span class="pl-1 d-none d-sm-inline">Deselect All</span>
+</button>
+<table *ngIf="subscriptionList && subscriptionList.subscriptions" class="cui striped w-100">
+  <thead>
+    <tr>
+      <th scope="col">Subscription ARN {{subscriptionList.subscriptions.length}} records
+        <span *ngIf='subscriptionSelectList && subscriptionSelectList.selectedOptions.selected.length > 0'>
+          | {{subscriptionSelectList.selectedOptions.selected.length}} selected
+        </span>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <mat-selection-list #subscriptionSelectList class='subscription-viewport'>
+      <mat-list-option *ngFor="let subscription of subscriptionList.subscriptions" class="subscription-item">
+        <td>{{subscription.arn}}</td>
+      </mat-list-option>
+    </mat-selection-list>
+  </tbody>
+</table>
+<div *ngIf="!subscriptionList">Select a topic to see subscriptions</div>

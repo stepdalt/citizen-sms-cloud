@@ -1,0 +1,36 @@
+﻿<div  class="d-flex justify-content-center cui coc-pl">
+    <form [formGroup]="loginForm" [appFormValidation]='loginForm' [submitted]='submitted'>
+        <div class="card my-3">
+            <div class="card-header text-center">
+                <h1 class="mb-0">Login</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="login-Username">
+                        <span class="field-name">COC Username </span>
+                        <span class="label-required">(required)</span>
+                    </label>
+                    <input appTrimInput type="text" id="login-Username" class="form-control" aria-required="true" autofocus autocapitalize="off"
+                    autocorrect="off" required title="please enter your City of Calgary Username"
+                    [appControlValidation]='loginForm' formControlName="username" #username />
+                </div>
+                <div class="form-group mb-0">
+                    <label for="login-Password">
+                        <span class="field-name">COC Password </span>
+                        <span class="label-required">(required)</span>
+                    </label>
+                    <input type="password" id="login-Password" class="form-control" aria-required="true" autofocus 
+                    required title="please enter your City of Calgary Password" [appControlValidation]='loginForm'
+                    formControlName="password" #password />
+                </div>
+            </div>
+            <div class="card-footer">
+                <button id="submit" class="cui m-0 btn-lg primary btn-fluid" title="complete sign in"
+                    (click)='onValidate(username.value,password.value)' >
+                    Sign in
+                </button>
+            </div>
+            <div id="loginErrorMsg" class="card-footer has-error"></div>
+        </div>
+    </form>
+</div>

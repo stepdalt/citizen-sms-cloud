@@ -1,0 +1,47 @@
+<div class="cui app-page-title-block">
+  <div class="row align-items-end">
+    <div class="col-text col-sm-8 col-md-9">
+      <a [appSafeBackButton]="backOptions" appStopPropagation href='#'
+            class="page-context-link">Back to home</a>
+      <h1>SMS Connection Manager - Add Subscription</h1>
+    </div>
+  </div>
+</div>
+<div class="container mb-5">
+  <div>Adding subscription to {{topicArn}}</div>
+
+  <mat-tab-group (selectedTabChange)='onTabChange($event)'>
+    <mat-tab label="Single Number">
+      <form [formGroup]='subscriptionForm'>
+        <div class="d-flex flex-wrap row">
+          <div class="form-group col-md-6">
+            <label for="phoneNumber">
+              <span class="field-name">Phone Number</span>
+              <span class="label-required"> (required)</span>
+            </label>
+            <input appTrimInput id="phoneNumber" type="text" class="form-control" maxlength="50" aria-required="true"
+              formControlName="phoneNumber">
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+    <mat-tab label="File">
+      <form [formGroup]='subscriptionFileForm'>
+        <div class="d-flex flex-wrap row">
+          <div class="form-group col-md-6">
+            <label for="phoneNumberList">
+              <span class="field-name">Phone Number File</span>
+              <span class="label-required"> (required)</span>
+            </label>
+            <input id="phoneNumberList" type="file" (change)="onNativeInputFileSelect($event)"
+              formControlName="phoneNumberList" />
+          </div>
+        </div>
+      </form>
+    </mat-tab>
+  </mat-tab-group>
+
+  <button class="cui btn-md primary primary justify-content-between align-items-center" (click)='save()'>
+    <span>Submit</span>
+  </button>
+</div>

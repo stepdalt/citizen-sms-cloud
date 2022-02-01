@@ -1,0 +1,13 @@
+
+form {
+  
+  & > .card {
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  #loginErrorMsg:empty {
+    display: none;
+  }
+
+}

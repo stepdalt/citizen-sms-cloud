@@ -1,0 +1,45 @@
+<div class="cui app-page-title-block">
+  <div class="row align-items-end">
+    <div class="col-text col-sm-8 col-md-9">
+      <a [appSafeBackButton]="backOptions" appStopPropagation href='#' class="page-context-link">Back to home</a>
+      <h1>Settings</h1>
+    </div>
+  </div>
+</div>
+<div class="container my-5 coc-pl">
+
+<h2>Technical Settings</h2>
+<div class="row">
+    <div class="col-sm-6">
+        <div>
+            <span class="font-weight-bold">Debugging Logs</span>
+        </div>
+                <span>Off </span>
+                <mat-slide-toggle 
+                    color="primary"
+                    [checked]="logSettingsAmalgam"
+                    aria-label="Toggle Log Settings" 
+                    (change)="onLogSettingChanged($event)" class="px-2" >
+                    <span> On</span>
+                </mat-slide-toggle>
+
+            <div class="d-flex">
+                <div class="flex-grow-1">
+                    Console Log Settings
+                    <div><mat-slide-toggle color="primary" [(ngModel)]="logSettings.console.debug" 
+                        (change)="onSubLogSettingChanged()">Debug</mat-slide-toggle></div>
+                    <div><mat-slide-toggle color="primary" [(ngModel)]="logSettings.console.info" 
+                        (change)="onSubLogSettingChanged()">Info</mat-slide-toggle></div>
+                    <div><mat-slide-toggle color="primary" [(ngModel)]="logSettings.console.warn" 
+                        (change)="onSubLogSettingChanged()">Warn</mat-slide-toggle></div>
+                    <div><mat-slide-toggle color="primary" [(ngModel)]="logSettings.console.error" 
+                        (change)="onSubLogSettingChanged()">Error</mat-slide-toggle></div>
+                    <div><mat-slide-toggle color="primary" [(ngModel)]="logSettings.console.audit" 
+                        >Audit</mat-slide-toggle></div>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- end -->
+</div>

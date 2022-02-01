@@ -1,0 +1,36 @@
+.input-group input {
+    z-index: 1;
+    border: 1px solid #ced4da;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    font-size: 1em;
+    text-decoration: none;
+    border-left: solid 2px #bdc2c6;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em;
+    opacity: 1;
+    height: 2.3rem;
+    cursor: pointer;
+  }
+
+.spinner .ui-spinner .ui-spinner-button {
+    font-size: 1em;
+    text-decoration: none;
+    border-left: solid 2px #bdc2c6;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 .5em;
+    cursor: pointer;
+}
+
+.list-item-button {
+    float: right;
+}
+
+.mat-expansion-panel-header[aria-disabled=true] {
+    color: inherit;
+}

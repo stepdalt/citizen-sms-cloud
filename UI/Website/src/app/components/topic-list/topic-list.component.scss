@@ -1,0 +1,40 @@
+.topic-viewport {
+    height: 40vh;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .topic-item {
+    height: 50px;
+  }
+
+  /* results grid table styles */
+table {
+
+    // row color for when pressed
+    .selected{ 
+        background-color:#ccd5de !important; 
+        color:white; 
+    }
+    // table heading styles
+    &.cui thead {
+
+        tr {
+
+            th {
+                background-color: #5d6066;
+                color: #f6f6f6;
+                transition: .2s;
+            }
+        }
+        
+    }
+    &.cui tbody {
+        tr {
+            &:hover {
+                border: 2px solid #0000ff63;
+                cursor: pointer;
+            }
+        }
+    }
+}

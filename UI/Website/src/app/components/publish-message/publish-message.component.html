@@ -1,0 +1,28 @@
+<div class="cui app-page-title-block">
+  <div class="row align-items-end">
+    <div class="col-text col-sm-8 col-md-9">
+      <a [appSafeBackButton]="backOptions" appStopPropagation href='#'
+            class="page-context-link">Back to home</a>
+      <h1>SMS Connection Manager - Publish Message</h1>
+    </div>
+  </div>
+</div>
+<div class="container mb-5">
+  <div>Messaging to {{topicArn}}</div>
+
+  <form [formGroup]='publishForm'>
+        <div class="d-flex flex-wrap row">
+          <div class="form-group col-md-6">
+            <label for="message">
+              <span class="field-name">Message</span>
+            </label>
+            <textarea appTrimInput id="message" class="form-control" rows="4" data-print-name='message'
+                    aria-required="true" formControlName="message"></textarea>
+          </div>
+        </div>
+      </form>
+
+  <button class="cui btn-md primary primary justify-content-between align-items-center" (click)='publish()'>
+    <span>Publish</span>
+  </button>
+</div>

@@ -1,0 +1,28 @@
+.subscription-viewport {
+    height: 40vh;
+    width: 100%;
+    overflow-y: scroll;
+    border: 1px solid black;
+  }
+  
+  .subscription-item {
+    height: 50px;
+  }
+
+  /* results grid table styles */
+table {
+
+    // table heading styles
+    &.cui thead {
+
+        tr {
+
+            th {
+                background-color: #5d6066;
+                color: #f6f6f6;
+                transition: .2s;
+            }
+        }
+        
+    }
+}

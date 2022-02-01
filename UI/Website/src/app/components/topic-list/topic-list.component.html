@@ -1,0 +1,47 @@
+<div class="d-flex flex-wrap row">
+  <div class="col-md-6">
+    <button aria-label="New Topic" class="cui btn-md utility-btn-solid" (click)="onNewTopic()">
+      <span class="pl-1 d-none d-sm-inline">New Topic</span>
+    </button>
+    <button *ngIf="selectedTopic" aria-label="Delete Topic" class="cui btn-md utility-btn-solid"
+      (click)="onDeleteTopic()">
+      <span class="pl-1 d-none d-sm-inline">Delete Topic</span>
+    </button>
+
+    <div *ngIf='isAddingTopic'>
+      <form [formGroup]='topicForm'>
+        <div class="d-flex flex-wrap row">
+          <div class="form-group col-md-6">
+            <label for="topicName">
+              <span class="field-name">New Topic Name</span>
+              <span class="label-required"> (required)</span>
+            </label>
+            <input appTrimInput id="topicName" type="text" class="form-control" maxlength="50" aria-required="true"
+              formControlName="topicName">
+          </div>
+        </div>
+      </form>
+      <button aria-label="Save Topic" class="cui btn-md utility-btn-solid" (click)="onSaveNewTopic()">
+        <span class="pl-1 d-none d-sm-inline">Save Topic</span>
+      </button>
+    </div>
+    <table *ngIf="topics" class="cui striped w-100">
+      <thead>
+        <tr>
+          <th scope="col">Topic ARN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <cdk-virtual-scroll-viewport itemSize="25" class="topic-viewport">
+          <tr *cdkVirtualFor="let topic of topics" class="topic-item" [class.selected]="topic === selectedTopic"
+            (click)="onSelect(topic);">
+            <td>{{topic}}</td>
+          </tr>
+        </cdk-virtual-scroll-viewport>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6">
+    <app-subscription-list [topicArn]="selectedTopic"></app-subscription-list>
+  </div>
+</div>
