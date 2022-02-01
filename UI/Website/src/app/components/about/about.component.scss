@@ -1,0 +1,10 @@
+// import color references
+@import '../../../assets/theme/custom-palettes';
+
+div.coc-version {
+    color: $coc-secondary-2L;
+    font-size: 1.4rem;
+}
+.coc-version span {
+    color: $coc-secondary-2L;
+}

@@ -1,0 +1,38 @@
+
+/**
+ * this defines the behavior of the primary container
+ * from the root node as a column flex layout, to allow
+ * the header to stick to the top and footer to the bottom
+ * while the body can resize as required
+ */
+#ui-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  min-height: 100vh;
+
+  height: 100%;
+}
+
+/**
+ * these following classes define the amount of spacing
+ * to push the body content down beyond the header at the
+ * different screensizes, as the height changes as per PL
+ * as the screen gets larger
+ */
+.has-fixed-header {
+  padding-top: 1.4rem;
+}
+
+@media (min-width: 768px) {
+  .has-fixed-header {
+    padding-top: 6.8rem; 
+  } 
+}
+
+@media (min-width: 1200px) {
+  .has-fixed-header {
+    padding-top: 10.3rem; 
+  } 
+}

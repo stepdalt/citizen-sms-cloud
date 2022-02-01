@@ -1,0 +1,14 @@
+<div class="d-flex flex-column">
+    <h1 mat-dialog-title class="modal-header modal-title">{{data.title}}</h1>
+    <div mat-dialog-content>
+        <p>{{data.message}}</p>
+    </div>
+    <div mat-dialog-actions>
+      <button mat-button class="cui btn-md primary float-left" [mat-dialog-close]="true" cdkFocusInitial>
+        {{data.confirm}}
+      </button>
+      <button mat-button class="cui btn-md primary-text float-right" [mat-dialog-close]="false">
+        {{data.decline}}
+      </button>
+    </div>
+</div>

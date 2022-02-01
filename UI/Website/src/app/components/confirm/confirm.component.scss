@@ -1,0 +1,24 @@
+// import color references
+@import '../../../assets/theme/custom-palettes';
+
+
+/* title */
+.mat-dialog-title {
+    background: $coc-secondary-9L;
+    border-bottom: 0.1rem solid $coc-secondary-3D;
+    padding: 1.2rem 1.8rem;
+    font-size: 2rem !important;
+}
+/* content body */
+.mat-dialog-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+/* footer */
+.mat-dialog-actions {
+    display: block;
+    background: $coc-secondary-9L;
+    border-top: 0.1rem solid $coc-secondary-3D;
+    padding: 1.2rem 1.8rem;
+}

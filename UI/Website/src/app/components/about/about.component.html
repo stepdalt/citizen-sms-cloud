@@ -1,0 +1,18 @@
+<div class="cui app-page-title-block">
+    <div class="row align-items-end">
+        <div class="col-text col-sm-8 col-md-9">
+            <a [appSafeBackButton]="backOptions" appStopPropagation href='#'
+            class="page-context-link">Back to home</a>
+            <h1>About</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5 coc-pl">
+
+    <h2>{{env.application.appHeaderTitleLg}} version # {{env.version}}</h2>
+    <br>
+    <div class="coc-version">
+        COC Angular Version: <span>{{COCVersion.full}}</span>
+    </div>
+</div>

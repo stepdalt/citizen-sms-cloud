@@ -1,0 +1,22 @@
+<div class="coc-pl my-2 container">
+  <div class="banner-context alert-dismissable">
+    <div class="cui alert-banner {{ alertBanner.cssClass }} global-inline-alertbox inline-alertbox" role="alertdialog" aria-labelledby="dialog1Title">
+      <div class="alertbanner-box d-flex">
+        <div class="alert-icon mx-3 my-2">
+          <span class="cicon {{ alertBanner.cssIconClass }}" aria-hidden="true"></span>
+        </div>
+        <div class="alertbanner-box-contents d-flex justify-content-between align-items-center flex-grow-1">
+          <div id="dialog1Title">
+            <strong>{{alertBanner.typeName}}</strong> | {{alertBanner.message}}
+          </div>
+          <button class="cui d-inline-flex align-items-center mx-2 btn-sm utility-btn" (click)="clear()">
+            <span class="cicon-times right" aria-hidden="true"></span>&nbsp;
+            <span class="d-none d-lg-inline">close</span>
+          </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
